@@ -86,8 +86,7 @@ module.exports = function resolver (bower) {
       var request_ = request.defaults(reqOptsForScope(scope));
       var deferred = Q.defer();
 
-      var packageInfoUri = config.scopes[scope].server + '/@' +
-          scope + '%2f' + packageName + '/';
+      var packageInfoUri = config.scopes[scope].server + '/' + packageName + '/';
 
       request_(packageInfoUri, function(error, response, body) {
         if (error) {
